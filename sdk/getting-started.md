@@ -5,11 +5,11 @@ sidebar_position: 1
 # Getting Started
 
 :::danger Temporary Chat Wallets Only (For now)
-This SDK version is designed for temporary chat wallets. Use private keys used **for chat purposes only** - never enter your personal wallet keys or accounts containing funds. Future versions will support connected wallets and enable safe signing without exposing private keys.
+This SDK version is designed for temporary chat wallets. Use private keys used **for chat purposes only**, never enter your personal wallet keys or accounts containing funds. Future versions will support connected wallets and enable safe signing without exposing private keys.
 :::
 
 
-Welcome to the **Moki SDK** - a fast, lightweight SDK for building Web3 chat applications with end-to-end encryption.
+Welcome to the **Moki SDK**, a fast, lightweight SDK for building Web3 chat applications with end-to-end encryption.
 
 ## Overview
 

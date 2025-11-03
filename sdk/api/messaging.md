@@ -194,20 +194,6 @@ const unwatch = messageClient.watchChat("alice", (newMessages) => {
 unwatch()
 ```
 
-#### React Integration
-
-```typescript
-useEffect(() => {
-  const unwatch = messageClient.watchChat("alice", (messages) => {
-    setMessages(prev => [...prev, ...messages])
-  })
-
-  return () => unwatch()
-}, [])
-```
-
----
-
 ### `getIdentityFromUsername`
 
 Looks up a user's identity by username.
