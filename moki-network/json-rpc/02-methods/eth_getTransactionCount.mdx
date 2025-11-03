@@ -1,0 +1,22 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `eth_getTransactionCount`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="eth_getTransactionCount"
+description="Returns the number of transactions sent from an address."
+parameters={[
+    { id: "address", type: "address", description: "A string representing the address (20 bytes) to check for balance."},
+    { id: "block parameter", type: "hex", description: "A hexadecimal block number, or one of the string tags latest, earliest, pending, safe, or finalized"}
+    ]
+}
+returns={
+    { id: "transactionCount", type: "hex", description: "A hexadecimal equivalent of the integer representing the number of transactions sent from the given address."}
+}
+ response={"0x1a"}
+/>

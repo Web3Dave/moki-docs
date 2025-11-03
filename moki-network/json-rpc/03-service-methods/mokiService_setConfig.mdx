@@ -1,0 +1,22 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `mokiService_setConfig`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="mokiService_setConfig"
+description="Sets the Users config."
+exampleParams={[{ push_gateway: "https://gateway.moki.network", token: "0x4543438eab84c39..."}]}
+parameters={ [
+        { id: "Config", type: "json", description: "Users configuration"},
+    ]}
+returns={
+            { id: "success", type: "boolean", description: "Returns true if succeeded"}
+}
+ response={true
+ }
+/>

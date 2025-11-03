@@ -1,0 +1,13 @@
+# `mokiService_getMessageCount`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+authHeader
+method="mokiService_getMessageCount"
+description="Returns the total number of messages sent from an address. Including expired messages."
+returns={
+    { id: "totalMessages", type: "hex", description: "A hexadecimal of the total messages sent"}
+}
+ response={"0x1a"}
+/>

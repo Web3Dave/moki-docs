@@ -1,0 +1,25 @@
+# `moki_updateDeligateIdentity`
+
+import Method from '@site/src/components/RPC/Method'
+
+:::warning
+Changing the deligate identity will have the following impact:
+- Future messages will be encrypted using the new deligate public key.
+- Notification Service settings will be wiped to prevent undecryptable information.
+
+This method is commonly called around account creation, before the notification service is set.
+:::
+
+<Method
+method="moki_updateDeligateIdentity"
+description="Sets the deligate identity for a given wallet. The deligate identity is used for adding a deligate wallet for message encryption / decryption without exposing the main wallet."
+exampleParams={["0xe34a390133bd2d3ef..."]}
+parameters={ [
+        { id: "Signed Deligate Data", required: true, type: "hex", description: "Signed data for the deligate identity (`nonce`+`deligatePublicKey`)"},
+    ]}
+returns={
+            { id: "success", type: "boolean", description: "Returns true if succeeded"}
+}
+ response={true
+ }
+/>

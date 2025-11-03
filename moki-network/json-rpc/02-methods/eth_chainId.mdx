@@ -1,0 +1,17 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `eth_chainId`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="eth_chainId"
+description="Returns the currently configured chain ID, a value used in replay-protected transaction signing as introduced by EIP-155"
+returns={
+    { id: "blockNumber", type: "hex", description: "A hexadecimal of the current chain ID"}
+}
+ response={"0x19FE"}
+/>

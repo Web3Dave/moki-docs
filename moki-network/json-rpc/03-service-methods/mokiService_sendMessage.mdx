@@ -1,0 +1,47 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `mokiService_sendMessage`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+authHeader
+method="mokiService_sendMessage"
+description="Send a message to another identity on the Moki Network"
+parameters={[
+    { id: "message data", type: "hex", description: "The signed message data (`sender_identity`+`recipient_identity`+`encryptedMessage`+`nonce`+`timestamp`)."}
+    ]
+}
+returns={
+    [
+        
+                { id: "message", type: "object", description: "Message object", values: [
+                    { id: "id", type: "string", description: "Message unique ID"},
+                    { id: "message", type: "string", description: "Encrypted message as hex"},
+                    { id: "from", type: "address", description: "Address of sender"},
+                    { id: "to", type: "address", description: "Address of recipient"},
+                    { id: "signature", type: "string", description: "Message signature from sender"},
+                    { id: "sender_receipt", type: "hex", description: "Receipt from sender service node"},
+                    { id: "receiver_receipt", type: "hex", description: "Receipt from receiver service node"},
+                    { id: "timestamp", type: "number", description: "Timestamp of message"},
+                ]},
+    ]
+}
+ response={
+    
+        {
+            "id": "17539442452862540956057",
+            "message": "2863b7fa05d337...",
+            "from": "0x7085aa6e71f325ed88d04daba003020bfd9214ea",
+            "to": "0x22a4dc6353e087a5c37c7168bcf149e9342eb922",
+            "signature": "0xb7edb74193d54...",
+            "sender_receipt": "0xe80e5e4ccd1...",
+            "receiver_receipt": "0x450e5e4ccd1...",
+            "timestamp": 1753944245286
+            
+        }
+ }
+/>

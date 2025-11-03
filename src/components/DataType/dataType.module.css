@@ -1,0 +1,39 @@
+.typeBase {
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    /* margin: 0 0.5em; */
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: white;
+    /* text-transform: uppercase; */
+}
+
+
+.--type-string {
+    background-color: #61affe;
+}
+
+.--type-number {
+    background-color: #03cc00;
+}
+
+.--type-hex {
+    background-color: #f230fc;
+}
+
+.--type-object {
+    background-color: #a850e3;
+}
+
+.--type-array {
+    background-color: #ffae00;
+}
+
+.delete {
+    background-color: #f93e3e;
+}
+
+.--type-default {
+    background-color: #bebebe;
+}

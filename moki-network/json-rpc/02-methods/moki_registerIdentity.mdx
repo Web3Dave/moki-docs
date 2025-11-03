@@ -1,0 +1,21 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `moki_registerIdentity`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="moki_registerIdentity"
+description="Registers an identity on the audit chain."
+parameters={[
+    { id: "rawIdentityRequest", type: "hex", description: "The signed identity data [Signature, Version(1), ChainId(6654), DeligatedPublicKey(Compressed), ServiceAddress, Nonce(VarInt)]."}
+]}
+returns={
+    
+           { id: "success", type: "boolean", description: "Returns true if succeeded"}
+}
+ response={true}
+/>

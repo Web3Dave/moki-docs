@@ -1,0 +1,19 @@
+# `eth_accounts`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="eth_accounts"
+description="Returns a list of addresses owned by the client."
+returns={
+    
+            { id: "data", type: "array", description: "Array of messages from inbox", values:[
+                { id: "address", type: "address", description: "Address of wallet owned by client"},
+            ]}
+}
+ response={[
+     "0x22a4dc6353e087a5c37c7168bcf149e9342eb922",
+        "0xd980f6b9ba3223711989639664ffb26c75ecc50b"
+        ]
+ }
+/>

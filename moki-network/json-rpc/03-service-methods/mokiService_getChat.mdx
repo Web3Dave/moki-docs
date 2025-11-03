@@ -1,0 +1,72 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `mokiService_getChat`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+authHeader
+method="mokiService_getChat"
+description="Fetch a list of messages in the users inbox"
+ filterObject
+ parameters={[
+    { id: "inboxFilter", type: "object", required: true, description: "Filter object for inbox data"},
+    { id: "inboxFilter", type: "object", required: true, description: "Filter object for inbox data", values: [
+        { id: "limit", type: "number", description: "Defaults to 20"},
+        { id: "after", type: "messageId", description: "Fetch messages after given MessageID"},
+        { id: "before", type: "messageId", description: "Fetch messages before given MessageID"}
+        ]} 
+    ]}
+returns={
+    [
+        { id: "payload", type: "object", required: true, description: "Payload as an object", values: [
+            { id: "id", type: "hex", description: "ID of chat"},
+            { id: "data", type: "array", description: "Array of messages from inbox", values:[
+                { id: "message", type: "object", description: "Message object", values: [
+                    { id: "id", type: "string", description: "Message unique ID"},
+                    { id: "message", type: "string", description: "Encrypted message as hex"},
+                    { id: "from", type: "address", description: "Address of sender"},
+                    { id: "to", type: "address", description: "Address of recipient"},
+                    { id: "signature", type: "hex", description: "Message signature from sender"},
+                    { id: "sender_receipt", type: "hex", description: "Receipt from sender service node"},
+                    { id: "receiver_receipt", type: "hex", description: "Receipt from receiver service node"},
+                    { id: "timestamp", type: "number", description: "Timestamp of message"},
+                ]},
+            ]},
+            { id: "end", type: "boolean", description: "True if results reaches the end of the search"}
+            ] 
+        }
+    ]
+}
+ response={[
+    {
+    "id": "0x22a4dc6353e087A5c37c7168bCF149e9342eB922",
+    "data": [
+        {
+            "message": "0e93eee849d168...",
+            "from": "0xd980f6b9ba3223711989639664ffb26c75ecc50b",
+            "to": "0x22a4dc6353e087a5c37c7168bcf149e9342eb922",
+            "signature": "0xb7edb74193d54...",
+            "sender_receipt": "0xe80e5e4ccd1...",
+            "receiver_receipt": "0x450e5e4ccd1...",
+            "timestamp": 1753944225115,
+            "id": "17539442251150027127416"
+        },
+        {
+            "message": "2863b7fa05d337...",
+            "from": "0x7085aa6e71f325ed88d04daba003020bfd9214ea",
+            "to": "0x22a4dc6353e087a5c37c7168bcf149e9342eb922",
+            "signature": "0xb7edb74193d54...",
+            "sender_receipt": "0xe80e5e4ccd1...",
+            "receiver_receipt": "0x450e5e4ccd1...",
+            "timestamp": 1753944245286,
+            "id": "17539442452862540956057"
+        },
+    ],
+    "end": true
+}]
+ }
+/>

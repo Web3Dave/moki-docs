@@ -1,0 +1,13 @@
+# `mokiService_getServiceNonce`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+authHeader
+method="mokiService_getServiceNonce"
+description="Returns the service nonce of the requester. The service nonce represents the number of persisted actions performed since account creation (non-message)."
+returns={
+    { id: "serviceNonce", type: "hex", description: "A hexadecimal of the service nonce"}
+}
+ response={"0x1a"}
+/>

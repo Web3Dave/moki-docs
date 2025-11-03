@@ -1,0 +1,46 @@
+# `moki_getService`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="moki_getService"
+description="Returns information for a service."
+parameters={ [
+        { id: "address", type: "address", description: "Address of service"},
+    ]}
+returns={
+            { id: "service", type: "object", description: "Service Object", values:[
+                { id: "id", type: "address", description: "Address of service"},
+                { id: "publicKey", type: "hex", description: "Public Key of service"},
+                { id: "deligate_id", type: "address", description: "Address of deligate identity"},
+                { id: "deligate_public_key", type: "hex", description: "Public Key of deligate identity"},
+                { id: "metadata", type: "object", description: "Metadata for service", values:[
+                    {
+                        id: "url", type: "string", description: "URL of service"
+                    },
+                    {
+                        id: "icon", type: "string", description: "URL of icon for service (png, jpg, webp)"
+                    }
+                ]},
+                { id: "offering", type: "object", description: "Offering details", values:[
+                    {id: "retention_days", type: "number", description: "Days of message retention"},
+                    {id: "cost", type: "object", description: "Optional cost data, null means the service is free"}
+                ]},
+            ]}
+}
+ response={{
+  "id": "0x22a4dc6353e087A5c37c7168bCF149e9342eB922",
+  "public_key": "0x92e4dc6353e087A5c37c7168bCF149e9342eB922",
+  "deligate_id": "0x92e4dc6353e087A5c37c7168bCF149e9342eB922",
+  "deligate_public_key": "0x92e4dc6353e087A5c37c7168bCF149e9342eB922",
+  "metadata": {
+    "url": "https://example-service.com",
+    "icon": "https://example-service.com/images/icon.png"
+  },
+  "offering": {
+    "retention_days": 365,
+    "cost": null
+  }
+}
+ }
+/>

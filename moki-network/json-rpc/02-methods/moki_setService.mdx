@@ -1,0 +1,17 @@
+# `moki_setService`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="moki_setService"
+description="Sets the service for a given wallet."
+exampleParams={["0xe34a390133bd2d3ef..."]}
+parameters={ [
+        { id: "Signed Service Data", type: "hex", description: "Signed data for the service (`nonce`+`serviceId`+`timestamp`)"},
+    ]}
+returns={
+            { id: "success", type: "boolean", description: "Returns true if succeeded"}
+}
+ response={true
+ }
+/>

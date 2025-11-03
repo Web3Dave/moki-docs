@@ -1,0 +1,31 @@
+---
+sidebar_custom_props:
+  status: completed
+---
+
+# `moki_getIdentity`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="moki_getIdentity"
+description="Returns information for an identity."
+parameters={
+    [
+        { id: "address", type: "address", description: "Address of identity"},
+    ]
+}
+exampleParams={["0x22a4dc6353e087A5c37c7168bCF149e9342eB922"]}
+returns={
+            { id: "identity", type: "object", description: "Identity Object", values:[
+            { id: "publicKey", type: "hex", description: "Public Key of identity"},
+            { id: "deligate_public_key", type: "hex", description: "Public Key of deligate identity"},
+            { id: "service_id", type: "address", description: "Address of service"}
+            ]}
+}
+ response={{
+    "public_key": "0x0256c1229c7554e0ccb61f626d1dd9ab46cd2c631f1cab839cb5a283803ef03924",
+    "deligate_public_key": "0x02c6047f9441ed7d6d3045406e95c07cd85a9c0d6d0f77c3f4d5f5cbdc0e5f6b6a",
+    "service_id": "0x71c7656ec7ab88b098defb751b7401b5f6d8976f"
+    }}
+/>

@@ -1,0 +1,22 @@
+---
+sidebar_custom_props:
+  status: wip
+---
+
+# `eth_getBalance`
+
+import Method from '@site/src/components/RPC/Method'
+
+<Method
+method="eth_getBalance"
+description="Returns the balance of the account of a given address."
+parameters={[
+    { id: "address", type: "address", description: "A string representing the address (20 bytes) to check for balance."},
+    { id: "block parameter", type: "hex", description: "A hexadecimal block number, or one of the string tags latest, earliest, pending, safe, or finalized"}
+    ]
+}
+returns={
+    { id: "balance", type: "hex", description: "A hexadecimal of the current balance in the account at the given address"}
+}
+ response={"0x7c2562030800"}
+/>

@@ -1,0 +1,49 @@
+.endpointTable {
+    width: 600px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    position: relative;
+}
+
+/* Flattened selectors (no nesting) */
+.endpointTable caption {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: left;
+    display: block;
+    background-color: #dee7ff;
+
+    padding: 4px 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Make sure header/body are true table groups (not block/flex) */
+.endpointTable thead {
+    display: table-header-group;
+}
+
+.endpointTable tbody {
+    display: table-row-group;
+}
+
+/* Optional but helps with long text */
+.endpointTable th,
+.endpointTable td {
+    padding: 6px;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    /* or remove to allow wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header caption {
+    background-color: #d1ffcb;
+}
+
+.query caption {
+    background-image: linear-gradient(#dee7ff97, #f5c5ff92);
+    background-size: 300%;
+
+}
