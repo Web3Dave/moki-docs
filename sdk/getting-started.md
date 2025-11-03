@@ -117,5 +117,3 @@ The `dangerouslyUseAccountAsDelegate` option is perfectly safe for temporary cha
 ## Need Help?
 
 - Check out the [GitHub repository](https://github.com/Web3Dave/moki-sdk)
-- Review the [API documentation](./api/accounts.md)
-- Explore [code examples](./examples.md)
