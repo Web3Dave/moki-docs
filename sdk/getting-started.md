@@ -114,13 +114,6 @@ const messageClient = createMessageClient(provider, {
 The `dangerouslyUseAccountAsDelegate` option is perfectly safe for temporary chat wallets since they contain no real funds. This option is only "dangerous" if used with your personal wallet keys (which you should never do with this SDK version).
 :::
 
-## Next Steps
-
-- [**Installation Guide**](./installation.md) - Detailed setup instructions
-- [**Core Concepts**](./core-concepts.md) - Understanding the architecture
-- [**API Reference**](./api/accounts.md) - Complete API documentation
-- [**Examples**](./examples.md) - Code examples and use cases
-
 ## Need Help?
 
 - Check out the [GitHub repository](https://github.com/Web3Dave/moki-sdk)
