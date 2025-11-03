@@ -110,7 +110,7 @@ const config: Config = {
           items: [
             {
               label: 'SDK',
-              to: '/sdk/intro',
+              to: '/sdk/getting-started',
             },
             {
               label: 'Moki Network',
